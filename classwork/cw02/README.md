@@ -11,7 +11,7 @@ The page shows different cooling resources and uses HTML and CSS to create a sid
 
 ## Rule That Broke My Map
 
-One rule I removed was `display: flex` from the `main` element. This caused the sidebar and map to stop sitting next to each other.
+One rule I removed was "display: flex" from the "main" element. This caused the sidebar and map to stop sitting next to each other.
 
 ## GenAI Use
 
