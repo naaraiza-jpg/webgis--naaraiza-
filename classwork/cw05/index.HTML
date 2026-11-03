@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Phoenix Shade Finder</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+    <!-- MarkerCluster CSS -->
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
+
+    <link rel="stylesheet"
+          href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
+
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- MarkerCluster JavaScript -->
+    <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+
+    <!-- Your JavaScript -->
+    <script src="app.js" defer></script>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Phoenix Shade Finder</h1>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <h2>Layers</h2>
+
+            <label>
+                <input type="checkbox"
+                       data-layer="centers"
+                       checked>
+                Cooling Centers
+            </label>
+
+            <label>
+                <input type="checkbox"
+                       data-layer="hydration"
+                       checked>
+                Hydration Stations
+            </label>
+
+            <label>
+                <input type="checkbox"
+                       data-layer="stops"
+                       checked>
+                Rail Stops
+            </label>
+
+            <label>
+                <input type="checkbox"
+                       data-layer="cities"
+                       checked>
+                Cities
+            </label>
+
+            <h2>Selected</h2>
+
+            <p id="selected">Click a site.</p>
+
+        </aside>
+
+        <!-- Map and Locate Me -->
+<div class="map-container">
+
+    <div id="map"></div>
+
+    <button id="locate">Locate Me</button>
+
+</div>
+    </main>
+
+</body>
+</html>
