@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <title>Traffic Accidents in Great Britain</title>
+
+        <style>
+            html,
+            body {
+                background-color: var(--calcite-ui-foreground-2);
+                padding: 0;
+                margin: 0;
+                width: 100vw;
+                height: 100vh;
+            }
+        </style>
+
+        <script type="module" src="https://js.arcgis.com/calcite-components/3.3.3/calcite.esm.js"></script>
+        <script src="https://js.arcgis.com/4.34/"></script>
+        <script type="module" src="https://js.arcgis.com/4.34/map-components/"></script>
+    </head>
+
+    <body>
+       
+<arcgis-map
+    item-id="c1984f0caafa4895bbe2317deb58ebad"
+    center="-0.131340, 51.513590"
+    zoom="6">
+   
+    <arcgis-zoom slot="top-right"></arcgis-zoom>
+    <arcgis-legend slot="bottom-right" legend-style="classic"></arcgis-legend>
+</arcgis-map>
+
+<script type="module">
+    const esriConfig = await $arcgis.import("@arcgis/core/config.js");
+
+    // API key commented out per professor's instructions
+    // esriConfig.apiKey = "YOUR_API_KEY";
+    const map = document.querySelector("arcgis-map");
+
+map.addEventListener("arcgisViewReadyChange", (event) => {
+    map.addEventListener("arcgisViewClick", (event) => {
+        map.popupDisabled = true;
+
+        if (map.basemap.id == "gray-3d") {
+            map.basemap = "dark-gray-3d";
+        } else {
+            map.basemap = "gray-3d";
+        }
+    });
+});
+</script>
+
+    </body>
+</html>
