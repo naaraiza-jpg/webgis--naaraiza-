@@ -1,0 +1,328 @@
+
+:root {
+    --shade: #1b4332;
+    --leaf: #74c69d;
+    --sun: #ffb703;
+    --asphalt: #2b2d42;
+    --sand: #fdf6e3;
+    --paper: #ffffff;
+    --line: #d9d2c0;
+    --tap: 44px;
+}
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--asphalt);
+    background: var(--sand);
+}
+
+h1, h2, h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.35rem;
+}
+
+p {
+    max-width: 70ch;
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--shade);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--sun);
+    outline-offset: 3px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 5%;
+    background: var(--shade);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--paper);
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.brand img {
+    width: 48px;
+    height: 48px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+nav a {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--tap);
+    padding: 0.5rem 0.75rem;
+    color: var(--sun);
+    text-decoration: none;
+}
+
+nav a[aria-current="page"] {
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+.banner {
+    display: block;
+    margin: 1.5rem 0;
+}
+
+.routes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.25rem;
+}
+
+.card {
+    padding: 1.25rem;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+}
+
+.card p:last-child {
+    margin-bottom: 0;
+}
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+.schedule {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--paper);
+}
+
+.schedule caption {
+    padding: 0.75rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.schedule th,
+.schedule td {
+    padding: 0.75rem;
+    border: 1px solid var(--line);
+    text-align: left;
+}
+
+.schedule th {
+    color: var(--paper);
+    background: var(--shade);
+}
+
+.schedule tbody tr:nth-child(even) {
+    background: var(--sand);
+}
+
+form {
+    max-width: 650px;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group > label {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    min-height: var(--tap);
+    padding: 0.65rem;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    font: inherit;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    width: auto;
+    min-height: 0;
+}
+
+fieldset {
+    margin-bottom: 1.25rem;
+    padding: 1rem;
+    border: 1px solid var(--line);
+}
+
+legend {
+    padding: 0 0.4rem;
+    font-weight: bold;
+}
+
+fieldset label {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    min-height: var(--tap);
+}
+
+.form-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+button {
+    min-height: var(--tap);
+    padding: 0.65rem 1.25rem;
+    border: 0;
+    border-radius: 4px;
+    color: var(--paper);
+    background: var(--shade);
+    font: inherit;
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--asphalt);
+}
+
+footer {
+    padding: 2rem 5%;
+    color: var(--paper);
+    background: var(--shade);
+}
+
+footer h2 {
+    margin-top: 1.5rem;
+}
+
+footer ul {
+    padding-left: 1.5rem;
+}
+
+footer a {
+    color: var(--sun);
+}
+
+
+
+/* Map page layout */
+.app main {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.app main > h1 {
+    grid-column: 1 / -1;
+}
+
+.app aside {
+    padding: 1rem;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+}
+
+.app aside h2 {
+    font-size: 1.4rem;
+}
+
+.app aside label {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    min-height: var(--tap);
+}
+
+.app aside input[type="checkbox"] {
+    width: auto;
+    min-height: 0;
+}
+
+.app .map-wrapper {
+    min-width: 0;
+    position: relative;
+}
+
+.app #map {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #dfe9f3;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+}
+
+.app .map-control {
+    margin-top: 0.75rem;
+}
+
+@media (max-width: 650px) {
+    .app main {
+        grid-template-columns: 1fr;
+    }
+
+    .app #map {
+        min-height: 400px;
+    }
+}
