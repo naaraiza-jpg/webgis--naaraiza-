@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASU Internship Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <!--Hearder-->
+  <header>
+    <h1>ASU Internship Hub</h1>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#jobs">Find Jobs</a>
+    </nav>
+  </header> 
+  
+  <!--Main section containing left and right sidebars and a map area with a search bar at the middle-->
+  <main>
+    <!--Left sidebar-->
+    <aside>
+        <div>
+            <h2>Filters</h2> 
+       <label for="sort">Sort:</label>
+
+       <select>
+        <option value="best match">Best Match</option>
+        <option value="nearest">Nearest</option>
+        <option value="newest">Newest</option>
+        <option value="highest pay">Highest Pay</option>
+       </select>
+
+
+        </div>
+
+        <section>
+            <h3>Field of Study</h3>
+
+            <label>
+                <input type="checkbox" name="field" value="Engineering"> Engineering
+            </label><br>
+
+            <label>
+                <input type="checkbox" name="field" value="Business">Business
+            </label><br>
+
+            <label>
+                <input type="checkbox" name="field" value="Technology">Technology
+            </label><br>
+
+            <label>
+                <input type="checkbox" name="field" value="Healthcare"> Healthcare
+            </label><br>
+
+            <label>
+                <input type="checkbox" name="field" value="Construction"> Construction
+            </label>
+
+           <secttion>
+            <h3>Job Type</h3>
+
+            <label>
+                <input type="checkbox" name="job-type" value="part-time"> Part-time
+            </label><br>
+
+            <label>
+                <input type="checkbox" name="job-type" value="full-time"> Full-time
+            </label>
+            
+           </secttion>
+
+           <section>
+            <h3>Desired pay</h3>
+            
+            <label>
+                <input type="checkbox" name="pay" value="20"> $20+/hr
+            </label><br>
+
+            <label>
+                <input type="checkbox" name="pay" value="30"> $30+/hr
+            </label>
+           </section>
+
+           <section>
+            <h3>Transit Options</h3>
+
+            <label>
+                <input type="checkbox" name="transit" value="light-rail"> Light Rail Stations
+            </label><br>
+
+            <label>
+                <input type="checkbox" name="transit" value="bus"> Bus stops
+            </label>
+           </section>
+            
+
+
+
+        </section>
+
+        <section>
+            <h3>Distance from ASU Memorial Union</h3>
+            <label for="distance">Distance</label><br>
+            <input 
+            type="range"
+            id="disttance"
+            min="0"
+            max="30"
+            value="30" >
+
+            <div>
+                <span>0 mi</span>
+                <span>30 mi</span>
+            </div>
+        </section>
+       
+    </aside>
+
+    <!--Map Area-->
+
+<section>
+     <div>
+        <label for="search">Search</label>
+        <input type="search" id="#" placeholder="Search internships">
+    </div>
+
+    <div id="#">MAP GOES HERE</div>
+</section>
+   
+<!-- scrollable Right side bar-->
+<aside>
+    <h3>Job Listings</h3>
+    <div>
+        <article>
+            <div class="">
+                <h3 class="">Structural Engineering Intern</h3>
+                <p class="">$20/hr<br>Full-time</p>
+            </div>
+            <hr>
+            <p >Kimly-Horn<br>Tempe, AZ</p>
+           
+        </article>
+        <article>Carid 2</article>
+        <article>card 3</article>
+    </div>
+</aside>
+
+  </main>
+<!--Footer section-->
+  <footer>
+    <p>ASU Internship Hub</p>
+    <p>Authors: Naji, Jennifer, Ryan, Jesus</p>
+
+  </footer>
+
+</body>
+</html>
