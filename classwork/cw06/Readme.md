@@ -2,6 +2,7 @@
 
 ### Naji Araiza
 
-This folder is reserved for Classwork 06.
 
-The assignment materials will be added as the coursework is completed.
+I built a Leaflet Shade Finder map connected to GeoServer that displays cooling centers and other geographic data.
+
+I also tested WMS, WFS, and WCS services, including viewing feature information, testing transactions, displaying legends, and downloading DEM data.
